@@ -19,3 +19,10 @@ Primero ejecutamos el comando: `yarn init -y`
 Funciona como **middleware** en **express**, que nos permite tomar el *body* del **request http** y poder *parsearlo.*
 
 > `yarn add body-parser` <br> 
+
+
+#### Instalar dependencias de GraphQL. ####
+
+- GraphQL: `yarn add graphql`
+- Instalar Apollo para express: `yarn add graphql-server-express`
+- Instalar herramientas de Apollo: `yarn add graphql-tools`
