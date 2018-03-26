@@ -1,6 +1,6 @@
 const express = require('express')
-const bodyParse = require('body-parser')
-const { graphqlExpress } = require('graphql-server-express')
+const bodyParser = require('body-parser')
+const { graphqlExpress, graphiqlExpress } = require('graphql-server-express')
 const schema = require('./schema.js')
 
 /**
@@ -17,6 +17,13 @@ app.use(
 	'/graphql',
 	bodyParser.json(),
 	graphqlExpress({ schema })
+)
+
+app.use(
+	'/graphiql',
+	graphiqlExpress({
+		endpointURL: '/graphql'
+	})
 )
 
 /**
