@@ -5,6 +5,7 @@
 const { makeExecutableSchema } = require('graphql-tools')
 
 const typeDefs = `
+	# Entidad Curso
 	type Curso {
 		id: ID!
 		titulo: String!
@@ -14,6 +15,7 @@ const typeDefs = `
 		comentarios: [Comentario]
 	}
 
+	# Entidad Profesor
 	type Profesor {
 		id: ID!
 		nombre: String!
