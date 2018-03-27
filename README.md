@@ -26,3 +26,11 @@ Funciona como **middleware** en **express**, que nos permite tomar el *body* del
 - GraphQL: `yarn add graphql`
 - Instalar Apollo para express: `yarn add graphql-server-express`
 - Instalar herramientas de Apollo: `yarn add graphql-tools`
+
+<br>
+
+### Nodemon ###
+
+Esta dependencia sirve para reiniciar el servidor automaticamente cada vez que haya un cambio, además la vamos a instalar como dependencia de desarrollo con la bandera **-D**.
+
+`yarn add nodemon -D`
