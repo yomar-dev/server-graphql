@@ -43,6 +43,25 @@ const typeDefs = `
 	}
 `
 
-const schema = makeExecutableSchema({ typeDefs })
+const resolvers = {
+	Query: {
+		cursos: () => {
+			return [
+				{
+					id: 1,
+					titulo: "GraphQL",
+					descripcion: "Aprendiendo GraphQL."
+				},
+				{
+					id: 2,
+					titulo: "PHP OOP",
+					descripcion: "PHP Orientado a Objetos."
+				}
+			]
+		}
+	}
+}
+
+const schema = makeExecutableSchema({ typeDefs, resolvers })
 
 module.exports = schema

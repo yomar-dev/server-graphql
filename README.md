@@ -89,6 +89,36 @@ La directiva **@deprecated** indica a ***GraphQL*** que el campo con esta direct
 
 Los **resolvers** pueden devolver o bien los **datos** o bien una **Promesa.** Lo cual es muy conveniente si dichos datos son a su vez extraídos desde otros servidores o incluso desde otros **REST/APIs.**
 
+*Ejemplo* <br>
+
+**Entrada:**
+
+~~~
+{
+	id: 1,
+	titulo: "GraphQL",
+	descripcion: "Aprendiendo GraphQL"
+},
+~~~
+
+**Salida:**
+
+~~~
+{
+  "data": {
+    "cursos": [
+      {
+        "titulo": "GraphQL"
+      },
+      {
+        "titulo": "PHP OOP"
+      }
+    ]
+  }
+}
+~~~
+
+
 
 <br><br><br>
 
