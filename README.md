@@ -85,6 +85,10 @@ type Query {
 La directiva **@deprecated** indica a ***GraphQL*** que el campo con esta directiva es un campo obsoleto o que está en desuso a manera de advertencia, y a pesar que no se muestra en la documentación de ***GraphiQL***, aún se podría consultar y pedir en los resultados porque aún forma parte del esquema (por el momento, aunque no será así en el futuro).
 
 
+### Resolvers ###
+
+Los **resolvers** pueden devolver o bien los **datos** o bien una **Promesa.** Lo cual es muy conveniente si dichos datos son a su vez extraídos desde otros servidores o incluso desde otros **REST/APIs.**
+
 
 <br><br><br>
 
