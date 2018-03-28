@@ -77,3 +77,9 @@ type Query {
 	profesor(id: Int): Profesor
 }
 ~~~
+
+<br>
+
+### Deprecación de Campos ###
+
+La directiva **@deprecated** indica a ***GraphQL*** que el campo con esta directiva es un campo obsoleto o que está en desuso a manera de advertencia, y a pesar que no se muestra en la documentación de ***GraphiQL***, aún se podría consultar y pedir en los resultados porque aún forma parte del esquema (por el momento, aunque no será así en el futuro).
