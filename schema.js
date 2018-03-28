@@ -59,6 +59,14 @@ const resolvers = {
 				}
 			]
 		}
+	},
+	// Resolver Curso: Indicamos que cuando alguien pida un profesor vamos a devolver algo
+	Curso: {
+		profesor: () => {
+			return {
+				nombre: "Pedro"
+			}
+		}
 	}
 }
 
