@@ -64,10 +64,27 @@ const resolvers = {
 	Curso: {
 		profesor: () => {
 			return {
-				nombre: "Pedro"
+				id: 1,
+				nombre: "Pedro",
+				nacionalidad: "Argentino"
 			}
+		},
+		comentarios: () => {
+			return[
+				{
+					id: 1,
+					nombre: "Desafio",
+					cuerpo: "Esta es la solucion al desafio de la clase."
+				},
+				{
+					id: 2,
+					nombre: "Buen curso",
+					cuerpo: "Para ser un curso introductorio está muy bien eleborado."
+				}
+			]
 		}
 	}
+
 }
 
 const schema = makeExecutableSchema({ typeDefs, resolvers })

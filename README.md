@@ -37,6 +37,14 @@ Esta dependencia sirve para reiniciar el servidor automaticamente cada vez que h
 
 <br>
 
+### Ejecutar App ###
+
+Para ejecutar la aplicación debemos utilizar el siguiente comando:
+
+`yarn start`
+
+<br>
+
 ### Schema Básico ###
 
 ~~~
