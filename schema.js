@@ -2,7 +2,8 @@
  * Estamos indicando que del paquete 'graphql-tools' solo 
  * queremos la función 'makeExecutableSchema'.
  */
-const { makeExecutableSchema } = require('graphql-tools')
+const { makeExecutableSchema, addMockFunctionsToSchema } = require('graphql-tools')
+const casual = require('casual')
 
 const typeDefs = `
 	# Entidad Curso
@@ -88,5 +89,30 @@ const resolvers = {
 }
 
 const schema = makeExecutableSchema({ typeDefs, resolvers })
+
+addMockFunctionsToSchema({
+	schema,
+	mocks: {
+		Curso: () => {
+			return {
+				id: casual.uuid,
+				titulo: casual.word,
+				descripcion: casual.sentences(2)
+			}
+		},
+		Profesor: () => {
+			return {
+				nombre: casual.full_name,
+				nacionalidad: casual.country
+			}
+		}
+	},
+	/**
+	 * Si cambiamos esta bandera a TRUE se va mostrar la información definida
+	 * en nuestros resolver, de lo contrario seguira mostrando la información
+	 * generada por CASUAL.
+	 */
+	preserveResolvers: false
+})
 
 module.exports = schema

@@ -169,9 +169,15 @@ Los **resolvers** pueden devolver o bien los **datos** o bien una **Promesa.** L
 ~~~
 
 
+### Mocking ###
+
+Nos permite utilizar información **falsa** para simular datos reales.
+
+
 
 <br><br><br>
 
 ### Enlaces de interes ###
 [Apollo GraphQL](https://www.apollographql.com/client/) <br>
-[How To GraphQL](https://www.howtographql.com/)
+[How To GraphQL](https://www.howtographql.com/) <br>
+[Casual - Fake data generator for Javascript](https://github.com/boo1ean/casual) <br>
